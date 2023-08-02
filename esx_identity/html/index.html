@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css.">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
+		<title>Identity by Javi</title>
+	</head>
+
+	<body>
+		<div class="identity">
+			<div class="identity-background">
+
+				<div class="identity-container">	
+					<header class="identity-title">
+
+						<div class="title-part">
+							<i class="fa-solid fa-address-card"></i>
+							<div class="title-text">menu de identidad</div>
+						</div>
+
+					</header>
+
+					<main class="identity-inputs">
+						<div class="item-container">
+							<div class="item-title">Nombre</div>
+							<input id="firstname" placeholder="Jaime" required>  
+						</div>
+
+						<div class="item-container">
+							<div class="item-title">Apellidos</div>
+							<input id="lastname" placeholder="Jimenez">
+						</div>
+
+						<div class="item-container">
+							<div class="item-title">Nacimiento</div>
+							<input id="date" type="date" placeholder="Jaime">
+						</div>
+
+						<div class="item-container">
+							<div class="item-title">Altura</div>
+							<input id="height" type="range" min="140" max="220" value="140">
+							<div class="range-text">180cm</div>
+						</div>
+
+						<div class="identity-selection">
+							<div class="men" data-gender="m">
+								<i class="fa-solid fa-person"></i>
+							</div>
+
+							<div class="women" data-gender="f">
+								<i class="fa-solid fa-person-dress"></i>
+							</div>
+						</div>
+
+					</main>
+
+					<div class="identity-create">
+						<i class="fa-solid fa-square-plus"></i>
+						<div class="create-text">crear personaje</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+	<script src="./js/script.js"></script>
+</html>

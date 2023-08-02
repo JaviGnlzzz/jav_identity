@@ -1,0 +1,250 @@
+@font-face {
+	font-family: normal;
+	src: url(../fonts/normal.ttf);
+}
+
+*{
+	font-family: normal;
+	user-select: none;
+}
+
+:root{
+	--letter: rgb(228, 228, 228);
+	--main: #050505dc;
+	--secondary: #6b2525a4;
+	--icon: #af040491; 
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.identity{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/img1.jpg');
+	background-size: cover;
+	background-position: center;
+	object-fit: cover;
+}
+
+.identity-background{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(.6vh);
+}
+
+.identity-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	width: 60vh;
+	height: 35vh;
+	padding: 1vh;
+	border-radius: 1vh;
+	background-color: var(--main);
+	box-shadow: 0 0 .5vh var(--main);
+	animation: bounceIn .5s;
+	zoom: 110%;
+}
+
+.identity-container .identity-title{
+	position: absolute;
+	top: -2.5vh;
+	left: 1vh;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.identity-container .title-part{
+	display: flex;
+	align-items: center;
+	gap: 1vh;
+	padding: 1vh;
+	background-color: var(--secondary);
+	box-shadow: 0 0 .8vh var(--secondary);
+	border-radius: .5vh;
+	width: max-content;
+	text-transform: uppercase;
+	letter-spacing: .2vh;
+	font-size: 1.8vh;
+	color: var(--letter);
+}
+
+.identity-title i{
+	rotate: -20deg;
+}
+
+.identity-inputs{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	font-size: 1.4vh;
+	color: var(--letter);
+}
+
+.item-container{
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	animation: fadeIn .5s .5s forwards;
+}
+
+.item-container .item-title{
+	color: grey;
+	letter-spacing: .15vh;
+	margin-bottom: .5vh;
+}
+
+.item-container input{
+	color: var(--letter);
+	width: 15vh;
+	text-align: center;
+	background-color: rgba(252, 95, 95, 0.479);
+	border: .25vh solid rgba(252, 95, 95, 0.719);
+	padding: .3vh;
+	border-radius: .8vh;
+	outline: none;
+	transition: .25s ease-in-out;
+	font-size: 1.2vh;
+}
+
+.item-container:nth-child(4){
+	margin-top: 2.5vh;
+}
+
+.range-text{
+	margin-top: .65vh;
+	color: grey;
+	font-size: 1.35vh;
+}
+
+#height {
+	-webkit-appearance: none;
+	appearance: none; 
+	width: 60%;
+	cursor: pointer;
+	outline: none;
+	overflow: hidden;
+	border-radius: 1vh;
+	padding: .5vh;
+	border: none;
+	background-color: rgba(238, 97, 97, 0.178);
+	box-shadow: 0 0 .5vh rgba(238, 97, 97, 0.178);
+}
+  
+#height::-webkit-slider-runnable-track {
+	height: 1.5vh;
+	background: #cccccc00;
+}
+
+#height::-moz-range-track {
+	height: 15px;
+	background: #cccccc13;
+}
+
+#height::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none; 
+	width: 1.5vh;
+	height: 1.5vh;
+	border-radius: 50%;
+	background-color: rgb(231, 100, 100);
+	box-shadow: 0 0 .5vh rgb(231, 100, 100);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::-webkit-calendar-picker-indicator {display: none; }
+
+.identity-selection{
+	opacity: 0;
+	width: 20%;
+	height: 3.5vh;
+	background-color: var(--secondary);
+	box-shadow: 0 0 .5vh var(--secondary);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: .5vh;
+	border-radius: .6vh;
+	animation: fadeIn .5s .5s forwards;
+}
+
+.identity-selection div{
+	margin-top: .4vh;
+}
+
+.identity-selection i{
+	font-size: 2vh;
+	color: rgb(245, 119, 119);
+	text-shadow: 0 0 .6vh rgba(245, 119, 119, 0.671);
+	opacity: 40%;
+	cursor: pointer;
+	transition: .25s ease-in-out;
+}
+
+.identity-selection i:hover{
+	opacity: 60%;
+}
+
+.selected{
+	opacity: 100%;
+}
+
+.identity-create{
+	position: absolute;
+	bottom: -2vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	letter-spacing: .2vh;
+	background-color: rgb(141, 56, 56);
+	box-shadow: 0 0 1vh rgb(141, 56, 56);
+	font-size: 1.5vh;
+	color: var(--letter);
+	padding: .5vh;
+	border-radius: .8vh;
+	transition: all .15s ease-out;
+}
+
+.identity-create i{
+	margin: 0 .5vh;
+	margin-top: .25vh;
+}
+
+.identity-create:hover{
+	scale: 1.1;
+	cursor: pointer;
+}
+
+.shake{
+	animation: shakeX .8s;
+}
+
+.fadeout{
+	animation: fadeOutDown .35s forwards;
+}
